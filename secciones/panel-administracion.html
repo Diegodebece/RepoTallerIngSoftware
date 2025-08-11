@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Reservas - Estilo Clásico Barbería</title>
+    <link rel="stylesheet" href="/estilos/panel-administracion.css">
+</head>
+<body>
+    <header>
+        <h1>Panel de Administración</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="#" id="logout-btn">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="reservations-list">
+            <h2>Lista de Reservas</h2>
+            <div class="filters">
+                <label for="filter-date">Filtrar por Fecha:</label>
+                <input type="date" id="filter-date">
+                <label for="filter-barber">Filtrar por Barbero:</label>
+                <select id="filter-barber">
+                    <option value="">Todos</option>
+                </select>
+                <button id="apply-filters">Aplicar Filtros</button>
+                <button id="clear-filters">Limpiar Filtros</button>
+            </div>
+            <div class="table-container">
+                <table id="reservations-table">
+                    <thead>
+                        <tr>
+                            <th>Cliente</th>
+                            <th>Servicio</th>
+                            <th>Barbero</th>
+                            <th>Fecha y Hora</th>
+                            <th>Teléfono</th>
+                            <th>Correo</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <p id="no-reservations-message" style="display: none;">No hay reservas para mostrar.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Estilo Clásico Barbería. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="/scripts/ver-reservas.js"></script>
+</body>
+</html>

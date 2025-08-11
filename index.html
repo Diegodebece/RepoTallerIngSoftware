@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estilo Clásico</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="estilos/estilos.css">
+  <link rel="stylesheet" href="estilos/inicio.css">
+  <link rel="stylesheet" href="/estilos/reservas.css">
+  <link rel="stylesheet" href="/estilos/contacto.css">
+  <link rel="stylesheet" href="/estilos/login.css">
+  <link rel="stylesheet" href="/estilos/modal-error-admin.css">
+</head>
+
+<body>
+  <header id="encabezado">
+    <div class="alineacion">
+      <div class="logo">
+        <img src="img/logo-barberia.jpg" alt="Logo de la barbería Estilo Clásico">
+      </div>
+      <h1>Estilo Clásico</h1>
+      <button id="btn-menu" class="btn-menu" onclick="mostrarMenu()">☰</button>
+    </div>
+
+    <nav id="nav" class="nav-colapsado">
+      <ul>
+        <li><a href="#" onclick="cargarPagina('./secciones/inicio.html')">Inicio</a></li>
+        <li><a href="#" onclick="cargarPagina('./secciones/reserva-cliente.html')">Reservas</a></li>
+        <li><a href="#" onclick="cargarPagina('./secciones/servicios.html')">Servicios</a></li>
+        <li><a href="#" onclick="cargarPagina('./secciones/contacto.html')">Contacto</a></li>
+        <li><a href="#" onclick="cargarPagina('./secciones/login-admin.html')">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="content">
+    <!-- Aquí se cargará el contenido dinámico -->
+  </main>
+
+  <footer id="footer">
+    <div class="alineacion">
+      <div class="logo"><img src="/img/logo-barberia.jpg" alt="Logo de la barbería Estilo Clásico"></div>
+      <div>
+        <p><strong>Teléfonos de contacto:</strong></p>
+        <ul>
+          <li>099 123 456</li>
+          <li>2123 4567</li>
+        </ul>
+      </div>
+      <div>
+        <p><strong>Dirección:</strong></p>
+        <p id="direccion">8 de octubre 1834</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/clases.js" defer></script>
+  <script src="js/sistema.js" defer></script>
+  <script src="js/codigo.js" defer></script>
+</body>
+
+</html>

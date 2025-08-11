@@ -1,0 +1,28 @@
+<section id="login">
+  <h2>Inicio de sesion </h2>
+  <p>Bienvenido, ingrese sus datos</p>
+  <div class="campo-form">
+      <label for="txtUsuario">Usuario:</label>
+      <input type="text" id="txtUsuario" name="usuario" required>
+    </div>
+      
+
+
+    <div class="campo-form">
+      <label for="txtContrasena">Contraseña:</label>
+      <input type="password" id="txtContrasena" name="contrasena" required>
+    </div>
+
+    <div class="campo-form">
+      <button id="iniciar-sesion" onclick="iniciarSesion()">Iniciar sesión</button>
+    </div>
+</section>
+
+<div id="errorModal" class="modal hidden">
+  <div class="modal-content">
+    <h2>Error de autenticación</h2>
+    <p>Usuario o contraseña incorrectos.</p>
+    <button onclick="cerrarModal()">Cerrar</button>
+  </div>
+</div>
+

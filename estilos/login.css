@@ -1,0 +1,67 @@
+#login {
+  max-width: 400px;
+  margin: auto;
+  padding: 1.5rem;
+  font-family: sans-serif;
+  background-color: var(--beige-claro);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 3.5rem auto;
+}
+
+#login h2 {
+  text-align: center;
+  color: var(--marron-oscuro);
+  margin-bottom: 1rem;
+}
+
+#login p {
+  text-align: center;
+  color: var(--gris-carbon);
+  margin-bottom: 1.5rem;
+}
+
+#login .campo-form {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#login label {
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+  color: var(--gris-carbon);
+}
+
+#login input[type="text"],
+#login input[type="password"] {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--marron-medio);
+  background-color: var(--blanco-humo);
+  color: var(--gris-carbon);
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+#login input:focus {
+  outline: none;
+  border-color: var(--cobre);
+  box-shadow: 0 0 5px var(--cobre);
+}
+
+#login button {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--marron-medio);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+#login button:hover {
+  background-color: var(--marron-oscuro);
+}

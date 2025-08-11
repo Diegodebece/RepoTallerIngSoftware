@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+body, p, li, a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--gris-carbon); /* por ejemplo */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --marron-oscuro: #4B2E1B;
+  --marron-medio: #8C5C3E;
+  --beige-claro: #D8C6B0;
+  --gris-carbon: #2E2E2E;
+  --blanco-humo: #F5F5F5;
+  --cobre: #B26F45;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+#encabezado, #footer {
+  background-color: var(--beige-claro);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Contenedor superior del header */
+.alineacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* H1 centrado absoluto */
+.alineacion h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 2rem;
+  font-family: 'Georgia', serif;
+  color: var(--marron-oscuro);
+}
+
+/* Logo circular */
+.logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--marron-oscuro);
+}
+
+/* Botón hamburguesa siempre visible */
+.btn-menu {
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  color: var(--marron-oscuro);
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  transition: color 0.3s;
+}
+
+.btn-menu:hover {
+  color: var(--cobre);
+}
+
+/* Menú inicialmente oculto */
+#nav.nav-colapsado {
+  display: none;
+}
+
+/* Menú visible */
+#nav.nav-expandido {
+  display: block;
+}
+
+/* Lista de navegación vertical */
+#nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Links estilo botón */
+#nav a {
+  text-decoration: none;
+  color: var(--blanco-humo);
+  background-color: var(--marron-oscuro);
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background-color 0.3s, transform 0.2s;
+  display: inline-block;
+  user-select: none;
+  width: 160px;
+  text-align: center;
+}
+
+#nav a:hover {
+  background-color: var(--cobre);
+  transform: scale(1.05);
+}
+
+/* Estilo para el nav como modal centrado */
+#nav.nav-expandido {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(216, 198, 176, 0.75); /* beige semitransparente */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+/* Ajustamos la lista dentro del modal */
+#nav ul {
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 0;
+}
+/* Estilo para los ul dentro del footer */
+#footer ul, #direccion {
+  list-style: none;          
+  padding: 0;                
+  margin: 0.3rem 0 0 0;      
+  display: flex;             
+  gap: 1rem;                 
+  justify-content: center;   
+  font-weight: 600;          
+  color: var(--marron-oscuro);
+}
+
+
+/* === Media Query para vista móvil === */
+@media (max-width: 768px) {
+
+  /* Header */
+  #encabezado {
+    padding: 0.5rem 1rem;
+  }
+
+  .alineacion {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .alineacion h1 {
+    position: static;
+    transform: none;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Botón menú más chico */
+  .btn-menu {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  /* Nav */
+  #nav.nav-expandido {
+    padding: 1rem;
+  }
+
+  #nav a {
+    width: 140px;
+    font-size: 1rem;
+    padding: 0.4rem 1rem;
+  }
+
+  /* Contenido principal */
+  main {
+    padding: 0.5rem;
+  }
+
+  /* Sección inicio */
+  #bienvenido h2 {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  /* Footer */
+  #footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  #footer .alineacion {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #footer ul {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  #direccion {
+    text-align: center;
+  }
+}
+

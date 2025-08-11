@@ -1,0 +1,59 @@
+<section id="reservas">
+  <h2>Realizar reservas</h2>
+
+  <div class="campo-form">
+    <label for="txtNombre">Nombre completo:</label>
+    <input type="text" id="txtNombre">
+    <p id="errorNombre" style="color: red; font-size: 0.9em; display: block;"></p>
+  </div>
+
+  <div class="campo-form">
+    <label for="txtMail">Correo electrónico</label>
+    <input type="text" id="txtMail"><br>
+    <p id="errorMail" style="color: red; font-size: 0.9em; display: block;"></p>
+
+  </div>
+
+  <div class="campo-form">
+    <label for="txCelular">Teléfono celular</label>
+    <input type="text" id="txtCelular"><br>
+    <p id="errorCelular" style="color: red; font-size: 0.9em; display: block;"></p>
+
+  </div>
+
+  <div class="campo-form">
+    <label for="slcTipoServicio">Servicio</label>
+    <select name="tipoServicio" id="slcTipoServicio"><br>
+      <option value="201">Corte de pelo</option>
+      <option value="202">Corte de pelo personalizado</option>
+      <option value="203">Afeitado y perfilado</option>
+      <option value="204">Tinta de cabello</option>
+    </select>
+  </div>
+
+  <div class="campo-form">
+    <label for="slcBarbero">Elige barbero:</label>
+    <select id="slcBarbero" name="barbero">
+      <option value="0">Cualquiera</option>
+      <option value="101">Carlos Gómez</option>
+      <option value="102">Ana Martínez</option>
+      <option value="103">Miguel Díaz</option>
+    </select>
+  </div>
+
+  <div class="campo-form">
+    <label for="date">Fecha:</label>
+    <input type="date" id="date">
+  </div>
+
+  <div class="campo-form">
+    <label for="slcHorario">Elige uno de los horarios disponibles:</label>
+    <select id="slcHorario" name="Horario"></select>
+  </div>
+
+  <div id="msjHorarios"></div>
+  <div class="campo-form boton-reserva">
+    <input type="button" value="Realizar reserva" id="btnReservar">
+  </div>
+
+</section>
